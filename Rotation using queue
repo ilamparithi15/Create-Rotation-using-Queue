@@ -1,0 +1,19 @@
+str=input()
+rotate=int(input())
+char=[]
+for c in str:
+        char+=[c]
+        length=len(char)
+rotate=rotate%length  
+rotated=[None]*length
+p=0
+for value in range(rotate,length):
+        rotated[p]=char[value]
+        p+=1
+for value in range(rotate):
+        rotated[p]=char[value]
+        p+=1
+rotatedstring=""
+for value in rotated:
+        rotatedstring+=value
+print(rotatedstring)
